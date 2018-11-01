@@ -1,0 +1,1 @@
+bedtools sort command has a -faidx option that will sort a BED file according to the order in a chromosome names.txt file.

@@ -1,0 +1,10 @@
+perl ../../src/perl/GTF2transcript_info.pl < ../star_files/GRCm38.82.ERCC.gtf > GRCm38.82.ERCC.transcript_info.txt
+
+cp GRCm38.82.ERCC.transcript_info.txt GRCm38.82.FPtags.ERCC.transcript_info.txt
+perl ../../src/perl/GTF2transcript_info.pl < ../misc/egfp_sequence/FPtags_20160228.gtf >> GRCm38.82.FPtags.ERCC.transcript_info.txt
+
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.chr_patch_hapl_scaff.gtf.gz > GRCm38.82.withpatch.ERCC.gtf
+cat ../ercc/ERCC92.gtf >> GRCm38.82.withpatch.ERCC.gtf
+
+perl ../../src/perl/GTF2transcript_info.pl < GRCm38.82.withpatch.ERCC.gtf > GRCm38.82.withpatch.ERCC.transcript_info.txt

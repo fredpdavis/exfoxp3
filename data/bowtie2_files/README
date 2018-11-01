@@ -1,0 +1,5 @@
+# Bowtie2 index from iGenomes: ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Mus_musculus/UCSC/mm10/Mus_musculus_UCSC_mm10.tar.gz
+# Downloaded: Thu Mar 10 11:10:14 EST 2016
+#
+# cp -r iGenomes/Mus_musculus/UCSC/mm10/Sequence/Bowtie2Index ./
+#

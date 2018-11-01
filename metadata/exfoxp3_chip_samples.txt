@@ -1,0 +1,11 @@
+flowcell	FASTQ	origBam	sampleName	dataType	dataType2	inputFlowcell	inputSampleName	geoName
+130729_66	s10.fq.bz2	s10	iTreg_K27ac	ChIP-seq	ChIP_K27ac	130729_66	iTreg_input	chip_k27ac_iTreg
+130729_66	s11.fq.bz2	s11	TrTh2_K27ac	ChIP-seq	ChIP_K27ac	130729_66	TrTh2_input	chip_k27ac_eFTreg
+130729_66	s12.fq.bz2	s12	Th2_K27ac	ChIP-seq	ChIP_K27ac	130729_66	Th2_input	chip_k27ac_Th2
+130729_66	s30.fq.bz2	s30	iTreg_input	ChIP-seq	ChIP_input	NA	NA	chip_input_iTreg
+130729_66	s31.fq.bz2	s31	TrTh2_input	ChIP-seq	ChIP_input	NA	NA	chip_input_eFTreg
+130729_66	s32.fq.bz2	s32	Th2_input	ChIP-seq	ChIP_input	NA	NA	chip_input_Th2
+150528_0241	s17.fq.gz	s17	iTreg_Foxp3	ChIP-seq	ChIP_Foxp3	150528_0241	iTreg_input2	chip_foxp3_iTreg
+150528_0241	s19.fq.gz	s19	iTreg_input2	ChIP-seq	ChIP_input	NA	NA	chip_input2_iTreg
+150528_0241	s18.fq.gz	s18	TrTh2_Foxp3	ChIP-seq	ChIP_Foxp3	150528_0241	TrTh2_input2	chip_foxp3_eFTreg
+150528_0241	s20.fq.gz	s20	TrTh2_input2	ChIP-seq	ChIP_input	NA	NA	chip_input2_eFTreg

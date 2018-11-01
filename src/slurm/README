@@ -1,0 +1,20 @@
+   107	12:18	cp ~/data/github.repos/opticlobe/data/misc/README misc/
+   170	13:20	cp ~/data/github.repos/opticlobe/src/STAN/level1_ordered.stan .
+   285	11:45	cp *Robj ../20181004.paperFigs/
+   286	11:46	cp *rds ../20181004.paperFigs/
+   291	12:07	cp ../20180904.fisher_bulkDEG/*S1F*txt ./
+   346	12:31	cp bonelli_rna_samples.txt bonelli_ms_rna_samples.txt
+   347	12:32	cp bonelli_chip_samples.txt bonelli_ms_chip_samples.txt
+   348	12:33	cp bonelli_atac_samples.txt bonelli_ms_atac_samples.txt
+   541	13:30	cp ~/data/projects/bonelli.trth2/metadata/*ms*txt
+   543	13:30	cp ~/data/projects/bonelli.trth2/metadata/*ms*txt metadata/
+   573	13:49	cp ~/data/projects/bonelli.trth2/src/R/bonelliAnalysis.R R/
+   581	15:04	cp ~/bonelli/run/20180404.atac/process_atac.slurm.csh slurm/
+   589	15:50	cp ~/bonelli/run/20170919.reproc_chip_mm10/chip_* slurm/
+   606	8:52	cp ~/bonelli/run/20170412.nascentrna_k27m3chip/rnaseq_trim_quantify_kallisto.slurm.sh slurm/nascent_rnaseq_trim_quantify_kallisto.slurm.sh
+   656	9:07	cp /home/davisfp/bonelli/run/20180830.star_align_rna/rnaseq_align_STAR.slurm.sh nascent_rnaseq_align_STAR.slurm.sh
+   665	9:12	cp /home/davisfp/bonelli/run/20171205.kallisto_bootstrap_reporter_samples/rnaseq_quantify_kallisto.slurm.sh bulkrnaseq_quantify_kallisto.slurm.sh
+   671	9:13	cp /home/davisfp/bonelli/run/20180315.multiBigwigSummary/chip_summarize_step4.slurm.sh .
+   674	9:14	cp /home/davisfp/bonelli/run/20170717.cellranger_count_clusterized/cellranger_count_parallel.slurm.sh
+   682	9:19	cp /home/davisfp/bonelli/run/20171114.cellranger_count/cellranger_count_parallel.slurm.sh scrna_cellranger_count.slurm.sh
+   688	9:20	cp /home/davisfp/bonelli/run/20180708.reaggr_bulk_treg/cellranger_aggr_all_libs.sh ./scrna_cellranger_aggr.slurm.sh

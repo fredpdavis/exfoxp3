@@ -1,0 +1,14 @@
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.gtf.gz | awk -F"	" '{if ($3 == "transcript") {if ($7 == "+") {print "chr"$1,$4,$4 + 1,$9} else {print "chr"$1,$5,$5+1,$9}  }}' | sed 's/ /	/g' | sed 's/gene_id.*ENSMUST/ENSMUST/' | sed 's/".*$//' | grep -v '_' | grep -v '\.'  | sed 's/chrMT/chrM/g' | sort -k1,1 -k2,2n -k3,3n > GRCm38.82.tss.bed
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.gtf.gz | awk -F"	" '{if ($3 == "transcript") {print $9}}' | sed 's/; gene_source.*//' | sed 's/gene_id//' | sed 's/ gene_version.*transcript_id//' | sed 's/ transcript_version.*gene_name//' | sed 's/"//g' | sed 's/;/	/g' | sed 's/ //g' > GRCm38.82.transcript_gene_map.txt
+
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.chr_patch_hapl_scaff.gtf.gz | awk -F"	" '{if ($3 == "transcript") {if ($7 == "+") {print "chr"$1,$4,$4 + 1,$9} else {print "chr"$1,$5,$5+1,$9}  }}' | sed 's/ /	/g' | sed 's/gene_id.*ENSMUST/ENSMUST/' | sed 's/".*$//' | grep -v '_' | grep -v '\.'  | sed 's/chrMT/chrM/g' | sort -k1,1 -k2,2n -k3,3n > GRCm38.82.chr_patch_hapl_scaff.tss.bed
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.chr_patch_hapl_scaff.gtf.gz | awk -F"	" '{if ($3 == "transcript") {print $9}}' | sed 's/; gene_source.*//' | sed 's/gene_id//' | sed 's/ gene_version.*transcript_id//' | sed 's/ transcript_version.*gene_name//' | sed 's/"//g' | sed 's/;/	/g' | sed 's/ //g' > GRCm38.82.chr_patch_hapl_scaff.transcript_gene_map.txt
+
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.chr_patch_hapl_scaff.gtf.gz | awk -F"	" '{if ($3 == "transcript") {if ($7 == "+") {print "chr"$1,$4,$4 + 1,$9} else {print "chr"$1,$5,$5+1,$9}  }}' | sed 's/ /	/g' | sed 's/gene_id.*ENSMUST/ENSMUST/' | sed 's/".*$//' | grep -v '\.'  | sed 's/chrMT/chrM/g' | sort -k1,1 -k2,2n -k3,3n > GRCm38.82.chr_patch_hapl_scaff.tss.bed
+
+
+perl ../../src/perl/gtf2features.pl ~/data/projects/iwata_tbet/data/external/ucsc_files/mm10.chrom.sizes Mus_musculus.GRCm38.82.gtf.gz

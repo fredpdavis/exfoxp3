@@ -1,0 +1,8 @@
+# relies on refdata-cellranger-1.2.0 package
+
+cat /fdb/cellranger/refdata-cellranger-1.2.0/mm10/fasta/genome.fa egfp.fa > genome_mm10_egfp.fa
+cp /fdb/cellranger/refdata-cellranger-1.2.0/mm10/genes/genes.gtf genes_mm10_egfp.gtf
+cat ../../../misc/egfp.gtf >> genes_mm10_egfp.gtf
+
+module load cellranger
+cellranger mkref --memgb=60 --nthreads=16 --genome=mm10_egfp --fasta=genome_mm10_egfp.fa --genes=genes_mm10_egfp.gtf 2>mkref.err >mkref.out

@@ -1,0 +1,42 @@
+################################################################################
+#
+# Download genome assembly and gene sets from ENSEMBL
+#
+################################################################################
+
+#Genome assembly: GRCm38.p4 -- ENSEMBL Release 82
+
+1. GTF file
+ftp://ftp.ensembl.org/pub/release-82/gtf/mus_musculus/Mus_musculus.GRCm38.82.gtf.gz
+ftp://ftp.ensembl.org/pub/release-82/gtf/mus_musculus/Mus_musculus.GRCm38.82.chr_patch_hapl_scaff.gtf.gz
+
+2. Transcript sequences
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/cdna/Mus_musculus.GRCm38.cdna.all.fa.gz
+
+2b. noncoding RNA sequences
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/ncrna/Mus_musculus.GRCm38.ncrna.fa.gz
+
+3. Genome sequences
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.1.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.2.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.3.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.4.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.5.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.6.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.7.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.8.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.9.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.10.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.11.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.12.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.13.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.14.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.15.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.16.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.17.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.18.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.19.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.X.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.Y.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.chromosome.MT.fa.gz
+ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.nonchromosomal.fa.gz

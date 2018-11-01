@@ -1,0 +1,14 @@
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.82.gtf.gz > GRCm38.82.ERCC.gtf
+cat ../ercc/ERCC92.gtf >> GRCm38.82.ERCC.gtf
+
+zcat ../GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.1.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.2.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.3.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.4.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.5.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.6.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.7.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.8.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.9.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.10.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.11.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.12.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.13.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.14.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.15.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.16.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.17.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.18.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.19.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.X.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.Y.fa.gz ../external/GRCm38.ENSEMBL82/Mus_musculus.GRCm38.dna_sm.chromosome.MT.fa.gz > GRCm38.82.ERCC.fa
+
+cat ../ercc/ERCC92.fa >> GRCm38.82.ERCC.fa
+
+module load bedtools/2.24.0
+head -21 ../ucsc_files/mm10.chrom.sizes | sort | awk '{OFS="\t"} {print $1,0,$2}' | sed 's/^chr//' > regular_whole_chromosomes.bed
+grep 'biotype "rRNA' GRCm38.82.ERCC.gtf | grep '^1\|^2\|^3\|^4\|^5\|^6\|^7\|^8\|^9\|^10\|^11\|^12\|^13\|^14\|^14\|^15\|^16\|^17\|^18\|^19\|^X\|^Y' | awk 'BEGIN{OFS="\t"} {print $1,$4 - 1, $5}' | sort -k1,1 -k2,2n -k3,3n | bedtools merge > rRNA_regular_chromosomes.bed
+bedtools subtract -a regular_whole_chromosomes.bed -b rRNA_regular_chromosomes.bed > regular_chromosomes.nonribosomal_regions.bed
+
+
+sbatch build_star_index.SLURM.sh

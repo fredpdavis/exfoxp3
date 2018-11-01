@@ -1,0 +1,4 @@
+cat ../mm10/chr1.fa ../mm10/chr2.fa ../mm10/chr3.fa ../mm10/chr4.fa ../mm10/chr5.fa ../mm10/chr6.fa ../mm10/chr7.fa ../mm10/chr8.fa ../mm10/chr9.fa ../mm10/chr10.fa ../mm10/chr11.fa ../mm10/chr12.fa ../mm10/chr13.fa ../mm10/chr14.fa ../mm10/chr15.fa ../mm10/chr16.fa ../mm10/chr17.fa ../mm10/chr18.fa ../mm10/chr19.fa ../mm10/chrM.fa ../mm10/chrX.fa ../mm10/chrY.fa > mm10_normchrom.fa
+
+module load bowtie/1.1.2
+bowtie-build mm10_normchrom.fa mm10_genome

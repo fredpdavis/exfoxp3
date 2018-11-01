@@ -1,0 +1,8 @@
+sampleID	flowcell	fastqBase	sampleName	cellType	geoName
+a01	160511_0302	s01	MB_LU_RposGpos_r1	lung.Foxp3p	atac_lung_RFPpGFPp_Foxp3
+a02	160511_0302	s03	MB_SP_RposGpos_r1	spl.Foxp3p	atac_spleen_RFPpGFPp_Foxp3
+a03	160511_0302	s04	MB_SP_RposGneg_r1	spl.exFoxp3	atac_spleen_RFPpGFPn_exFoxp3
+a07	140923_140930	s40	Th1_in_vivo_Toxo	spl.Th1.Toxo	atac_spleen_Th1_Toxo
+a09	140626_0132_0133	s10	MB-Mm	spl.Tmem	atac_spleen_Tmem
+a10	150623_0376	s26	GT_CD25+SP	gut.cd25p	GSM2056312
+a11	150623_0376	s23	LU_Th2_Nippo_r3	lung.Th2.Nippo	GSM2056326

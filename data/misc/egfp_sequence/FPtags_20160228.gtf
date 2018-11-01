@@ -1,0 +1,2 @@
+eGFP	transcript	exon	1	717	0.000000	+	.	gene_id "eGFP"; transcript_id "eGFP";
+mCherry	transcript	exon	1	711	0.000000	+	.	gene_id "mCherry"; transcript_id "mCherry";

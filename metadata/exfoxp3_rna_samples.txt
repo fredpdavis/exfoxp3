@@ -1,0 +1,21 @@
+runID	fastqFn	origBam	sampleName	dataType	dataType2	stranded	cellType	libraryType	chromiumBarcode	est_target_cells	chromiumSampleNum	project	chromiumRef	runBatch	geoName
+160205_0417	s07.fq.gz	NA	MB1_lung_RFPp_GFPp-rep1	RNA-seq	bulk	no	lung.Foxp3p	bulk							rna_lung_RFPpGFPp_Foxp3_rep1
+160205_0417	s08.fq.gz	NA	MB2_lung_RFPp_GFPn-rep1	RNA-seq	bulk	no	lung.exFoxp3	bulk							rna_lung_RFPpGFPn_exFoxp3_rep1
+160205_0417	s09.fq.gz	NA	MB3_lung_RFPn_GFPn-rep1	RNA-seq	bulk	no	lung.nonFoxp3	bulk							rna_lung_RFPnGFPn_nonFoxp3_rep1
+160205_0417	s13.fq.gz	NA	MB1_lung_RFPp_GFPp-rep2	RNA-seq	bulk	no	lung.Foxp3p	bulk							rna_lung_RFPpGFPp_Foxp3_rep2
+160205_0417	s14.fq.gz	NA	MB2_lung_RFPp_GFPn-rep2	RNA-seq	bulk	no	lung.exFoxp3	bulk							rna_lung_RFPpGFPn_exFoxp3_rep2
+160205_0417	s15.fq.gz	NA	MB3_lung_RFPn_GFPn-rep2	RNA-seq	bulk	no	lung.nonFoxp3	bulk							rna_lung_RFPnGFPn_nonFoxp3_rep2
+160505_0432	s01.fq.gz	NA	nascent_Th2_rep1	nascentRNA-seq	nascent	yes	Th2	bulk							nascentrna_Th2_rep1
+160505_0432	s02.fq.gz	NA	nascent_TrTh2_rep1	nascentRNA-seq	nascent	yes	TrTh2	bulk							nascentrna_eFTreg_rep1
+160505_0432	s03.fq.gz	NA	nascent_iTreg_rep1	nascentRNA-seq	nascent	yes	iTreg	bulk							nascentrna_iTreg_rep1
+160505_0432	s04.fq.gz	NA	nascent_Th2_rep2	nascentRNA-seq	nascent	yes	Th2	bulk							nascentrna_Th2_rep2
+160505_0432	s05.fq.gz	NA	nascent_TrTh2_rep2	nascentRNA-seq	nascent	yes	TrTh2	bulk							nascentrna_eFTreg_rep2
+160505_0432	s06.fq.gz	NA	nascent_iTreg_rep2	nascentRNA-seq	nascent	yes	iTreg	bulk							nascentrna_iTreg_rep2
+160505_0432	s07.fq.gz	NA	nascent_Th2_rep3	nascentRNA-seq	nascent	yes	Th2	bulk							nascentrna_Th2_rep3
+160505_0432	s08.fq.gz	NA	nascent_iTreg_rep3	nascentRNA-seq	nascent	yes	iTreg	bulk							nascentrna_iTreg_rep3
+160505_0432	s09.fq.gz	NA	nascent_TrTh2_rep3	nascentRNA-seq	nascent	yes	TrTh2	bulk							nascentrna_eFTreg_rep3
+170621_0061	s01_S1_L001,s04_S4_L002,s07_S7_L003,s10_S10_L004,s13_S13_L005,s16_S16_L006,s19_S19_L007,s22_S22_L008		WT_lung_Th_ova	scRNA-seq	chromium	no	Th	chromium	SI-GA-A3	11576	s01,s04,s07,s10,s13,s16,s19,s22	bonelli	mm10_egfp	201706	scrna_lung_Th_ova
+170621_0061	s02_S2_L001,s05_S5_L002,s08_S8_L003,s11_S11_L004,s14_S14_L005,s17_S17_L006,s20_S20_L007,s23_S23_L008		WT_lung_Th_PBS	scRNA-seq	chromium	no	Th	chromium	SI-GA-B3	11576	s02,s05,s08,s11,s14,s17,s20,s23	bonelli	mm10_egfp	201706	scrna_lung_Th_pbs
+170621_0061	s03_S3_L001,s06_S6_L002,s09_S9_L003,s12_S12_L004,s15_S15_L005,s18_S18_L006,s21_S21_L007,s24_S24_L008		WT_mLN_Th_PBS	scRNA-seq	chromium	no	Th	chromium	SI-GA-C3	11576	s03,s06,s09,s12,s15,s18,s21,s24	bonelli	mm10_egfp	201706	scrna_mLN_Th_pbs
+171027_0094__171031_0095	s13_S1_L001,s19_S7_L002,s25_S13_L003,s07_S7_L006		S015_WT_lung_Treg_ova_set2	scRNA-seq	chromium	no	Treg	chromium	SI-GA-A5		s13,s19,s25,s07	bonelli	mm10_egfp	20171114	scrna_lung_Treg_ova
+171027_0094__171031_0095	s16_S4_L001,s22_S10_L002,s28_S16_L003,s10_S10_L006		S018_WT_lung_Treg_pbs_set2	scRNA-seq	chromium	no	Treg	chromium	SI-GA-D5		s16,s22,s28,s10	bonelli	mm10_egfp	20171114	scrna_lung_Treg_pbs
