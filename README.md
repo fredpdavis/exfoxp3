@@ -4,8 +4,8 @@ This package contains code to analyze genomic measurements (RNA, ATAC, and ChIP)
 and generate the figures and tables presented in:
 
 Treg cells maintain regulatory signature in Th2 inflammation despite
-destabilized Foxp3. 
-Bonelli M*, Davis FP*, Mikami Y*, et al., 2018. 
+destabilized Foxp3.  
+Bonelli M*, Davis FP*, Mikami Y*, et al., 2018.  
 
 Contact fred.davis@nih.gov with any questions.
 
@@ -31,8 +31,8 @@ which we do not provide but describe in README files how to obtain or build.
 | FASTQ (Shih 2016)                     | [GEO GSM2056312](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2056312)                                        |
 | FASTQ (Shih 2016)                     | [GEO GSM2056326](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2056326)                                        |
 | genome sequence, gene structure       | [ENSEMBL release 82; based on GRCm38 (mm10)](http://sep2015.archive.ensembl.org/Mus_musculus/Info/Index)               |
-| genome sequence                       | [UCSC mm10 genome sequence](ftp://genome-ftp.cse.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz)                      |
-| bowtie2 alignment index               | [iGenomes mm10](ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Mus_musculus/UCSC/mm10/Mus_musculus_UCSC_mm10.tar.gz)    |
+| genome sequence                       | [UCSC mm10 genome sequence](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz)                     |
+| bowtie2 alignment index               | [iGenomes mm10](https://support.illumina.com/sequencing/sequencing_software/igenome.html)                              |
 | genome sequence, gene structure       | [refdata-cellranger-1.2.0](http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-mm10-1.2.0.tar.gz)               |
 | Treg gene signature                   | [Dispiro et al., 2018. Supplementary Table 1](http://dx.doi.org/10.1126/sciimmunol.aat5861)                            |
 
@@ -67,7 +67,7 @@ slurm-based linux cluster.
 
 * RNA: b=bulk, n=nascent, s = single cell
 
-## Analysis overview
+## Raw data processing
 
 The analysis includes processing the RNA-seq (bulk, nascent, and single cell),
 ATAC-seq, ChIP-seq reads and then generating figures and tables.
@@ -75,7 +75,7 @@ ATAC-seq, ChIP-seq reads and then generating figures and tables.
 The data processing steps are implemented in shell scripts submitted to a slurm
 linux cluster using the sbatch command.
 
-## 1. bulk RNA-seq
+### 1. bulk RNA-seq
 
 This step pseudo-aligns bulk RNA-seq reads to the transcriptome.
 
@@ -83,7 +83,7 @@ This step pseudo-aligns bulk RNA-seq reads to the transcriptome.
 sbatch bulkrnaseq_quantify_kallisto.slurm.sh
 ```
 
-## 2. nascent RNA-seq
+### 2. nascent RNA-seq
 
 This step trims the first three nucleotides off of nascent RNA-seq reads, aligns
 trimmed reads to the transcriptome for abundance estimation and to the genome
@@ -94,7 +94,7 @@ sbatch nascent_rnaseq_trim_quantify_kallisto.slurm.sh
 sbatch nascent_rnaseq_align_STAR.slurm.sh
 ```
 
-## 3. single cell RNA-seq
+### 3. single cell RNA-seq
 
 This step begins with demultiplexed 10x chromium FASTQ reads (generated with
 `cellranger mkfastq`), and aligns these to a custom transcriptome that includes
@@ -105,7 +105,7 @@ sbatch scrna_cellranger_count.slurm.sh
 sbatch scrna_cellranger_aggr.slurm.sh
 ```
 
-## 4. ATAC-seq
+### 4. ATAC-seq
 
 This step trims adapters from ATAC-seq FASTQ reads, aligns them to the genome,
 calls peaks using sub-nucleosomal reads, and creates tracks for visualization.
@@ -114,7 +114,7 @@ calls peaks using sub-nucleosomal reads, and creates tracks for visualization.
 sbatch atac_process_samples.slurm.csh
 ```
 
-## 5. ChIP-seq
+### 5. ChIP-seq
 
 This step aligns ChIP-seq reads to the genome, creates tracks for visualization,
 calls peaks, and summarizes coverage across 1kb-genomics windows.
@@ -126,7 +126,7 @@ sbatch chip_peaks_step3.slurm.sh
 sbatch chip_summarize_step4.slurm.sh
 ```
 
-## 6. Generating figures and tables
+## Generating figures and tables
 
 An R script generates all the tables and figures in the manuscript.
 
